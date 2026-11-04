@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="en" data-theme="red"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact | H.H Traders</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root,[data-theme="red"]{--brand:#C8102E;--accent:#C8102E;--ink:#161616;--paper:#fff;--soft:#F4F4F4;--line:#DCDCDC;--mut:#3F3F3F;--headbg:#fff}
+[data-theme="black"]{--brand:#1D1D1D;--accent:#C8102E;--ink:#101010}
+[data-theme="maroon"]{--brand:#6E0B18;--accent:#6E0B18;--ink:#171214}
+[data-theme="slate"]{--brand:#3D4756;--accent:#C8102E;--ink:#14181D}
+[data-theme="blue"]{--brand:#1447B8;--accent:#1447B8;--ink:#12161D}
+[data-theme="emerald"]{--brand:#0F7A4D;--accent:#0F7A4D;--ink:#121613}
+[data-theme="amber"]{--brand:#B35E00;--accent:#B35E00;--ink:#171310}
+[data-theme="teal"]{--brand:#0E6B66;--accent:#0E6B66;--ink:#121615}
+[data-theme="violet"]{--brand:#5E2B97;--accent:#5E2B97;--ink:#151218}
+[data-theme="crimson"]{--brand:#B80C4D;--accent:#B80C4D;--ink:#171114}
+html{color-scheme:light}
+body{font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.5}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+input,select,textarea{font:inherit;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.wordmark{font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:30px;letter-spacing:.5px;white-space:nowrap}
+.wordmark .hh{color:var(--accent)}
+.wordmark .tr{color:var(--ink);font-style:italic}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;background:var(--brand);color:#fff;font-weight:700;border-radius:4px;border:2px solid var(--brand)}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.dark{background:#141414;border-color:#141414}
+.btn.sm{min-height:42px;padding:7px 14px;font-size:14px}
+.themebar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#141414;color:#fff;padding:8px 0}
+.themebar span{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#EDEDED}
+.themeBtn{min-height:36px;padding:6px 12px;border:1px solid #666;color:#fff;font-size:13px;font-weight:600;border-radius:4px;display:inline-flex;align-items:center;gap:7px}
+.themeBtn .sw{width:16px;height:16px;border-radius:3px;border:1px solid rgba(255,255,255,.55);flex:none;display:inline-block}
+.themeBtn.on{border-color:#fff;background:#fff;color:#141414}
+.iconbtn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid var(--line);border-radius:4px;background:#fff}
+.iconbtn svg{width:22px;height:22px}
+.badge{position:absolute;top:-8px;right:-8px;min-width:22px;height:22px;padding:0 5px;background:var(--accent);color:#fff;border-radius:4px;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.badge.pop{animation:pop .35s ease}
+@keyframes pop{50%{transform:scale(1.4)}}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0}
+.toolbar .grow{flex:1}
+.searchbox{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;padding:0 12px;min-height:46px;border-radius:4px;flex:1;min-width:200px}
+.searchbox input{border:none;outline:none;flex:1;min-height:44px;background:transparent}
+.searchbox svg{width:20px;height:20px;flex:none}
+select.sortsel{min-height:46px;border:1px solid var(--line);border-radius:4px;padding:0 10px;background:#fff}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:4px;font-weight:600;background:#fff;font-size:14px}
+.chip.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pcard{border:1px solid var(--line);border-radius:6px;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+.pcard .vis{position:relative;background:var(--soft);height:150px;display:flex;align-items:center;justify-content:center;color:var(--brand)}
+.pcard .vis .ic{width:74px;height:74px}
+.tag{position:absolute;top:10px;left:10px;background:#141414;color:#fff;font-size:11px;font-weight:800;letter-spacing:.6px;padding:4px 8px;border-radius:3px}
+.tag.moq{background:var(--brand)}
+.wish{position:absolute;top:8px;right:8px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:4px}
+.wish svg{width:20px;height:20px;fill:none;stroke:#141414;stroke-width:2}
+.wish.on svg{fill:var(--accent);stroke:var(--accent)}
+.pcard .body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pcard .cat{font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--brand)}
+.pcard h3{font-size:16.5px;line-height:1.3;cursor:pointer}
+.pcard h3:hover{color:var(--brand)}
+.price{font-size:18px;font-weight:800}
+.pcard .row{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+.pcard .row .btn{flex:1}
+.prow{display:flex;gap:16px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:14px;align-items:center}
+.prow .vis{width:110px;height:96px;flex:none;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--brand);position:relative;border-radius:4px}
+.prow .vis .ic{width:52px;height:52px}
+.prow .info{flex:1;min-width:0}
+.prow h3{font-size:17px;cursor:pointer}
+.prow p{font-size:14px;color:var(--mut)}
+.drawer{position:fixed;top:0;right:0;width:min(430px,94vw);height:100dvh;background:#fff;z-index:80;transform:translateX(105%);transition:transform .3s ease;display:flex;flex-direction:column;box-shadow:-6px 0 24px rgba(0,0,0,.25)}
+.drawer.open{transform:translateX(0)}
+.backdrop{position:fixed;inset:0;background:rgba(10,10,10,.55);z-index:70;opacity:0;pointer-events:none;transition:opacity .3s}
+.backdrop.open{opacity:1;pointer-events:auto}
+.drawer header{display:flex;align-items:center;justify-content:space-between;padding:16px;border-bottom:1px solid var(--line)}
+.drawer .items{flex:1;overflow:auto;padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.citem{display:flex;gap:12px;border:1px solid var(--line);border-radius:6px;padding:10px}
+.citem .vis{width:64px;height:64px;flex:none;background:var(--soft);color:var(--brand);display:flex;align-items:center;justify-content:center;border-radius:4px}
+.citem .vis .ic{width:36px;height:36px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:4px}
+.qty button{width:40px;height:40px;font-size:18px;font-weight:800}
+.qty span{min-width:30px;text-align:center;font-weight:700}
+.drawer footer{padding:16px;border-top:1px solid var(--line)}
+.subtotal{display:flex;justify-content:space-between;font-size:18px;font-weight:800;margin-bottom:12px}
+.modal{position:fixed;inset:0;z-index:90;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:22px 12px}
+.modal.open{display:flex}
+.modal .box{background:#fff;border-radius:6px;max-width:860px;width:100%;position:relative;z-index:2;padding:26px}
+.modal .scrim{position:fixed;inset:0;background:rgba(10,10,10,.6)}
+.xbtn{position:absolute;top:10px;right:10px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:22px;background:#fff;border:1px solid var(--line);border-radius:4px;z-index:3}
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pd .vis{background:var(--soft);min-height:280px;display:flex;align-items:center;justify-content:center;color:var(--brand);border-radius:6px}
+.pd .vis .ic{width:150px;height:150px}
+.pd ul{margin:10px 0 10px 18px}
+.pd li{margin:4px 0}
+form.co{display:grid;gap:12px}
+form.co label{font-weight:600;font-size:14px;display:grid;gap:6px}
+form.co input[type=text],form.co input[type=tel],form.co textarea{border:1px solid var(--line);border-radius:4px;min-height:46px;padding:9px 12px;width:100%}
+.payrow{display:flex;gap:10px;flex-wrap:wrap}
+.payrow label{border:1px solid var(--line);border-radius:4px;padding:10px 14px;display:flex;gap:8px;align-items:center;min-height:46px;cursor:pointer;font-weight:600}
+.success{text-align:center;padding:18px 6px}
+.success svg{width:96px;height:96px;margin:0 auto 14px;display:block}
+.success .circ{stroke:#1E7B34;stroke-width:3;fill:none;stroke-dasharray:290;stroke-dashoffset:290;animation:draw 0.7s ease forwards}
+.success .tick{stroke:#1E7B34;stroke-width:4;fill:none;stroke-linecap:square;stroke-dasharray:60;stroke-dashoffset:60;animation:draw 0.45s ease 0.55s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:#141414;color:#fff;padding:13px 20px;border-radius:4px;font-weight:600;z-index:120;opacity:0;pointer-events:none;transition:all .25s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.chatfab{position:fixed;right:18px;bottom:18px;z-index:95;width:56px;height:56px;border-radius:6px;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.chatfab svg{width:27px;height:27px}
+.chatpanel{position:fixed;right:18px;bottom:86px;z-index:96;width:min(360px,92vw);background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 12px 32px rgba(0,0,0,.25);display:none;flex-direction:column;overflow:hidden}
+.chatpanel.open{display:flex}
+.chatpanel header{background:#141414;color:#fff;padding:13px 16px;font-weight:800;display:flex;justify-content:space-between;align-items:center}
+.chatmsgs{height:280px;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px;background:var(--soft)}
+.msg{max-width:85%;padding:9px 12px;border-radius:6px;font-size:14px;line-height:1.45}
+.msg.bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
+.msg.me{background:var(--brand);color:#fff;align-self:flex-end}
+.chatform{display:flex;border-top:1px solid var(--line)}
+.chatform input{flex:1;border:none;outline:none;padding:0 12px;min-height:48px}
+.chatform button{background:var(--brand);color:#fff;font-weight:700;padding:0 18px}
+.quickchips{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid var(--line)}
+.quickchips button{border:1px solid var(--line);border-radius:4px;min-height:38px;padding:5px 10px;font-size:13px;font-weight:600;background:#fff}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:4px;background:#fff;align-items:center;justify-content:center}
+.burger svg{width:24px;height:24px}
+.mnav{position:fixed;top:0;left:0;width:min(320px,88vw);height:100dvh;background:#fff;z-index:85;transform:translateX(-105%);transition:transform .3s ease;padding:18px;display:flex;flex-direction:column;gap:6px;overflow:auto}
+.mnav.open{transform:translateX(0)}
+.mnav a,.mnav button.catlink{min-height:46px;display:flex;align-items:center;font-weight:700;border-bottom:1px solid var(--line);text-align:left;width:100%}
+.foot{background:#141414;color:#EDEDED;padding:44px 0 0;margin-top:56px}
+.foot h4{color:#fff;margin-bottom:10px;font-size:15px;letter-spacing:.6px;text-transform:uppercase}
+.foot a{display:block;padding:3px 0;color:#EDEDED}
+.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:26px}
+.copyright{border-top:1px solid #333;margin-top:30px;padding:16px 0;font-size:13px;color:#CFCFCF;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brandsstrip{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.brandmark{border:1px solid var(--line);background:#fff;padding:12px 18px;font-family:Archivo,Arial,sans-serif;font-weight:900;letter-spacing:1px;font-size:15px;border-radius:4px;color:#141414}
+.sec{padding:44px 0 6px}
+.sec h2{font-family:Archivo,Arial,sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;line-height:1.1}
+.sec .sub{color:var(--mut);margin-top:6px;max-width:640px}
+.kick{color:var(--brand);font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+.empty{padding:34px;text-align:center;border:1px dashed var(--line);border-radius:6px;color:var(--mut);font-weight:600}
+@media (max-width:1000px){.pgrid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){
+ .pgrid{grid-template-columns:repeat(2,1fr);gap:10px}
+ .pcard .vis{height:110px}.pcard .vis .ic{width:54px;height:54px}
+ .pd{grid-template-columns:1fr}
+ .footgrid{grid-template-columns:1fr 1fr}
+ .burger{display:inline-flex}
+ .sec h2{font-size:26px}
+ .prow{flex-wrap:wrap}
+ button,.chip,.themeBtn{min-height:44px}
+}
+
+html{scroll-behavior:smooth}
+body{animation:pageIn .45s ease}
+@keyframes pageIn{from{opacity:0}}
+.rv{opacity:0;transform:translateY(36px)}
+.rv.in{opacity:1;transform:translateY(0);transition:opacity .55s ease,transform .8s cubic-bezier(.34,1.56,.64,1)}
+.kbwrap{overflow:hidden;border-radius:6px}
+.kb{animation:kb 14s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+.pcard{transition:transform .25s ease,border-color .25s ease}
+@media (hover:hover) and (pointer:fine){.pcard:hover{transform:translateY(-3px);border-color:var(--brand)}}
+.wafloat{position:fixed;left:18px;bottom:18px;z-index:94;width:56px;height:56px;border-radius:6px;background:#1FA855;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.wafloat svg{width:28px;height:28px}
+.wafloat::after{content:"";position:absolute;inset:0;border-radius:6px;border:2px solid #1FA855;animation:waping 1.8s ease-out infinite}
+@keyframes waping{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.45);opacity:0}}
+.chatfab{bottom:18px}
+.chatpanel{bottom:86px}
+.mnav{transition:transform .38s cubic-bezier(.3,.8,.3,1)}
+.mnav.open .mitem{animation:drawerIn .45s cubic-bezier(.3,.8,.3,1) both}
+.mnav.open .mitem:nth-child(2){animation-delay:.04s}.mnav.open .mitem:nth-child(3){animation-delay:.08s}
+.mnav.open .mitem:nth-child(4){animation-delay:.12s}.mnav.open .mitem:nth-child(5){animation-delay:.16s}
+.mnav.open .mitem:nth-child(6){animation-delay:.2s}.mnav.open .mitem:nth-child(7){animation-delay:.24s}
+.mnav.open .mitem:nth-child(8){animation-delay:.28s}.mnav.open .mitem:nth-child(9){animation-delay:.32s}
+@keyframes drawerIn{from{opacity:0;transform:translateX(-16px)}}
+.iconbtn.pulse{animation:cpulse .45s ease}
+@keyframes cpulse{40%{transform:scale(1.14)}}
+.wish.pop svg{animation:heartPop .35s ease}
+@keyframes heartPop{40%{transform:scale(1.4)}}
+.flyclone{position:fixed;z-index:200;pointer-events:none;border-radius:6px;overflow:hidden}
+.spinner{width:18px;height:18px;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:inline-block;vertical-align:-3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinwrap{display:none;text-align:center;padding:26px 6px}
+.spinwrap .spinner{width:44px;height:44px;border-width:4px;border-color:var(--line);border-top-color:var(--brand)}
+.tl{position:relative;margin:26px 0 8px;padding:0 6px}
+.tl .track{position:absolute;top:13px;left:6%;right:6%;height:4px;background:var(--line);border-radius:2px}
+.tl .fill{position:absolute;top:13px;left:6%;height:4px;background:var(--brand);border-radius:2px;width:0;transition:width 1.2s ease .25s}
+.tl .steps{position:relative;display:flex;justify-content:space-between}
+.tl .step{width:25%;text-align:center;font-size:13px;font-weight:700;color:var(--mut)}
+.tl .step .dot{width:26px;height:26px;margin:0 auto 8px;border-radius:50%;background:#fff;border:3px solid var(--line);display:block;transform:scale(0)}
+.tl.go .step .dot{animation:dotPop .45s cubic-bezier(.34,1.56,.64,1) both}
+.tl .step.done{color:var(--ink)}
+.tl .step.done .dot{background:var(--brand);border-color:var(--brand)}
+@keyframes dotPop{from{transform:scale(0)}}
+.pagenav{display:flex;gap:18px;font-weight:700;flex-wrap:wrap}
+.pagenav a{min-height:44px;display:inline-flex;align-items:center}
+.pagenav a.on{color:var(--brand)}
+.sumrow{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);font-size:15px}
+@media(max-width:760px){
+ header .pagenav{display:none}
+ .d2phones{display:none}
+ .badge{right:-3px;top:-6px}
+}
+
+.d2head{background:#fff;border-bottom:1px solid var(--line)}
+.d2bar{display:flex;align-items:center;gap:14px;padding:10px 20px}
+.titleband{background:#141414;color:#fff;padding:30px 0}
+.titleband h1{font-family:Archivo,Arial,sans-serif;font-size:clamp(26px,4.4vw,42px);font-weight:900;text-transform:uppercase;line-height:1.1;max-width:760px}
+.titleband .row{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.catlayout{display:grid;grid-template-columns:262px 1fr;gap:22px;align-items:start;padding-top:8px}
+.side{border:1px solid var(--line);border-radius:6px;background:#fff;padding:18px;position:sticky;top:14px}
+.side h4{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;margin:14px 0 8px;color:var(--brand)}
+.side h4:first-child{margin-top:0}
+.side .catlink{display:flex;justify-content:space-between;width:100%;min-height:44px;align-items:center;font-weight:600;border-bottom:1px solid var(--line);text-align:left;padding:6px 2px}
+.side .catlink.on{color:var(--brand);font-weight:800}
+.side .bmark{display:block;border:1px solid var(--line);border-radius:4px;padding:9px 12px;font-weight:900;letter-spacing:1px;margin-bottom:8px;font-size:14px}
+.side .quick{background:var(--soft);border-radius:6px;padding:14px;margin-top:16px}
+#list{display:flex;flex-direction:column;gap:12px}
+.bulkband{background:var(--brand);color:#fff;border-radius:6px;padding:26px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:26px}
+.bulkband h3{font-size:24px;color:#fff}
+.bulkband .btn{background:#fff;color:#141414;border-color:#fff}
+@media(max-width:860px){.catlayout{grid-template-columns:1fr}.side{position:static}}
+
+.pimg{width:100%;height:100%;object-fit:cover;display:block}
+.pcard .vis{height:172px;overflow:hidden}
+.prow .vis{overflow:hidden}
+.citem .vis{overflow:hidden}
+.pd .vis{overflow:hidden}
+.slider{position:relative;overflow:hidden;background:#141414}
+.slides{display:flex;transition:transform .7s cubic-bezier(.3,.8,.3,1)}
+.slide{flex:0 0 100%;position:relative}
+.slide img{width:100%;height:clamp(320px,54vw,560px);object-fit:cover;display:block}
+.slide::after{content:"";position:absolute;inset:0;background:rgba(10,10,10,.16)}
+.slidecap{position:absolute;left:0;bottom:0;z-index:2;padding:24px 26px;max-width:640px;color:#fff;background:rgba(12,12,12,.58)}
+.slidecap .kick{color:#FFD9DE}
+.slidecap h2{font-size:clamp(30px,5.4vw,54px);line-height:1.02;text-transform:uppercase;color:#fff}
+.slidecap p{margin:10px 0 16px;font-size:17px;color:#F2F2F2;max-width:520px}
+.slarrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border-radius:4px;background:rgba(20,20,20,.75);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.slarrow.prev{left:14px}.slarrow.next{right:14px}
+.sldots{position:absolute;right:18px;bottom:16px;z-index:3;display:flex;gap:8px}
+.sldot{width:26px;height:10px;border-radius:3px;background:rgba(255,255,255,.45);border:none;cursor:pointer;padding:0}
+.sldot.on{background:var(--brand)}
+.divider{display:block;width:100%;height:46px;margin-bottom:-1px}
+.cattiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cattile{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;display:block}
+.cattile img{width:100%;height:130px;object-fit:cover;display:block}
+.cattile span{display:block;padding:12px 14px;font-weight:800}
+.cattile:hover{border-color:var(--brand)}
+.infocards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.infocard{border:1px solid var(--line);border-radius:6px;padding:20px;background:#fff}
+.infocard h3{margin-bottom:6px}
+.mapblock{background:#141414;color:#fff;border-radius:6px;padding:28px;text-align:center}
+@media(max-width:860px){.cattiles{grid-template-columns:repeat(2,1fr)}.infocards{grid-template-columns:1fr}}
+@media(max-width:760px){.slidecap{padding:18px}.slidecap p{display:none}}
+body{font-family:'Barlow',Arial,sans-serif}h1,h2,h3,.wordmark,.depthead h3{font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.6px}.sec h2{font-size:38px}.titleband h1{font-family:'Barlow Condensed',Arial,sans-serif}.slider{clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,26px 100%,0 calc(100% - 26px))}.prow .vis{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px))}.cattile{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}</style></head><body data-design="2" data-page="contact" data-mode="grid"><div class="themebar"><div class="wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;width:100%"><span>Colour Theme:</span><button class="themeBtn" data-theme="red"><span class="sw" style="background:#C8102E"></span>Classic Red</button><button class="themeBtn" data-theme="black"><span class="sw" style="background:#1D1D1D"></span>Midnight Black</button><button class="themeBtn" data-theme="maroon"><span class="sw" style="background:#6E0B18"></span>Deep Maroon</button><button class="themeBtn" data-theme="slate"><span class="sw" style="background:#3D4756"></span>Slate Grey</button><button class="themeBtn" data-theme="blue"><span class="sw" style="background:#1447B8"></span>Royal Blue</button><button class="themeBtn" data-theme="emerald"><span class="sw" style="background:#0F7A4D"></span>Emerald</button><button class="themeBtn" data-theme="amber"><span class="sw" style="background:#B35E00"></span>Amber Orange</button><button class="themeBtn" data-theme="teal"><span class="sw" style="background:#0E6B66"></span>Teal</button><button class="themeBtn" data-theme="violet"><span class="sw" style="background:#5E2B97"></span>Violet</button><button class="themeBtn" data-theme="crimson"><span class="sw" style="background:#B80C4D"></span>Crimson</button></div></div><header class="d2head"><div class="wrap d2bar"><button class="burger" data-action="burger" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><a class="wordmark" href="design-2-home.html"><span class="hh">H.H</span> <span class="tr">Traders</span></a><span style="margin-left:auto"></span><nav class="pagenav"><a href="design-2-home.html">Home</a><a href="design-2-shop.html">Shop</a><a href="design-2-about.html">About</a><a href="design-2-contact.html" class="on">Contact</a><a href="design-2-track.html">Track Order</a></nav><span style="font-weight:700" class="d2phones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;vertical-align:-3px" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> 0312 5488700</span><a class="iconbtn cartBtn" href="design-2-cart.html" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M2 3h3l2.6 12.4a1.5 1.5 0 0 0 1.5 1.1h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg><span class="badge cartBadge">0</span></a></div></header><nav class="mnav" id="mnav"><div style="display:flex;justify-content:space-between;align-items:center"><a class="wordmark" href="design-2-home.html"><span class="hh">H.H</span> <span class="tr">Traders</span></a><button data-action="close" aria-label="Close menu" style="width:44px;height:44px;font-size:22px">&times;</button></div><a class="mitem" href="design-2-home.html">Home</a><a class="mitem" href="design-2-shop.html">Shop</a><a class="mitem" href="design-2-cart.html">Cart</a><a class="mitem" href="design-2-checkout.html">Checkout</a><a class="mitem" href="design-2-track.html">Track Order</a><a class="mitem" href="design-2-about.html">About Us</a><a class="mitem" href="design-2-contact.html">Contact</a><span class="mitem" style="font-weight:800;color:var(--brand);border-bottom:none">Departments</span><button class="catlink mitem" data-catlink="all">All Products</button><button class="catlink mitem" data-catlink="fire">Fire Fighting Equipment</button><button class="catlink mitem" data-catlink="safety">Safety Items</button><button class="catlink mitem" data-catlink="support">Hanging Support Systems</button><button class="catlink mitem" data-catlink="hvac">HVAC</button><button class="catlink mitem" data-catlink="anchor">Adhesive & Epoxy Anchoring</button><button class="catlink mitem" data-catlink="tools">Power Tools</button><button class="catlink mitem" data-catlink="general">General Order Supplies</button><a class="mitem" href="tel:03125488700" style="margin-top:10px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;vertical-align:-3px" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> 0312 5488700</a><a class="mitem" href="tel:03465814290"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;vertical-align:-3px" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> 0346 5814290</a><a class="btn mitem" style="margin-top:10px" href="https://wa.me/923465814290" target="_blank" rel="noopener">WhatsApp Us</a></nav><section class="wrap sec" style="padding-top:34px"><span class="kick">Contact</span><h1 style="font-size:36px">Talk to the Trade Desk</h1><p class="sub">Send your item list or BOQ and get a same-day quote, or visit the store in Saddar, Rawalpindi.</p><div class="infocards" style="margin-top:20px"><div class="infocard"><h3>Store Address</h3><p>Office # 14, Mumtaz Market, City Saddar Road, Rawalpindi</p></div><div class="infocard"><h3>Phone</h3><p><a href="tel:03125488700" style="font-weight:800">0312 5488700</a><br><a href="tel:03465814290" style="font-weight:800">0346 5814290</a></p></div><div class="infocard"><h3>WhatsApp</h3><p>Fastest for bulk lists and photos of what you need.<br><a href="https://wa.me/923465814290" target="_blank" rel="noopener" style="font-weight:800;color:var(--brand)">Chat on WhatsApp</a></p></div></div></section><section class="wrap sec" style="max-width:760px"><h2>Send an Enquiry</h2><div id="ctFormView"><form class="co" id="ctForm" style="margin-top:14px"><label>Your Name<input type="text" name="name" required placeholder="e.g. Muhammad Usman"></label><label>Phone Number<input type="tel" name="phone" required placeholder="03XX XXXXXXX"></label><label>Your Message<textarea name="msg" required rows="4" placeholder="Write your item list or question..."></textarea></label><button class="btn" type="submit" style="width:100%">Send Enquiry</button></form></div><div id="ctSuccess" class="success" style="display:none"><svg viewBox="0 0 100 100"><circle class="circ" cx="50" cy="50" r="46"/><path class="tick" d="M30 52l14 14 26-30"/></svg><h2 style="font-size:26px">Enquiry Sent</h2><p style="margin:8px 0">Your enquiry reference is</p><p id="ctRef" style="font-size:28px;font-weight:900;color:var(--brand)">HH-ENQ-0000</p><p style="margin:8px 0 16px">The trade desk will call you back shortly.</p><a class="btn" href="design-2-shop.html">Continue to Shop</a></div></section><section class="wrap"><div class="mapblock"><h2 style="color:#fff;font-size:26px">Find Us in Saddar</h2><p style="margin:8px 0;color:#EDEDED">Office # 14, Mumtaz Market, City Saddar Road, Rawalpindi</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mumtaz+Market+City+Saddar+Road+Rawalpindi" target="_blank" rel="noopener">Open in Google Maps</a></div></section><footer class="foot"><div class="wrap"><div class="footgrid"><div><a class="wordmark" href="design-2-home.html"><span class="hh">H.H</span> <span class="tr">Traders</span></a><p style="margin-top:10px;max-width:300px">Industrial and safety wholesale for contractors, factories and workshops, from City Saddar Road, Rawalpindi.</p></div><div><h4>Pages</h4><a href="design-2-home.html">Home</a><a href="design-2-shop.html">Shop</a><a href="design-2-cart.html">Cart</a><a href="design-2-checkout.html">Checkout</a><a href="design-2-track.html">Track Order</a><a href="design-2-about.html">About Us</a><a href="design-2-contact.html">Contact</a></div><div><h4>Categories</h4><a href="design-2-shop.html" data-catlink="fire">Fire Fighting Equipment</a><a href="design-2-shop.html" data-catlink="safety">Safety Items</a><a href="design-2-shop.html" data-catlink="support">Hanging Support Systems</a><a href="design-2-shop.html" data-catlink="hvac">HVAC</a><a href="design-2-shop.html" data-catlink="anchor">Adhesive & Epoxy Anchoring</a></div><div><h4>Contact</h4><p>Office # 14, Mumtaz Market, City Saddar Road, Rawalpindi</p><a href="tel:03125488700">0312 5488700</a><a href="tel:03465814290">0346 5814290</a><a href="https://wa.me/923465814290" target="_blank" rel="noopener">WhatsApp: 0346 5814290</a><p style="margin-top:8px">Brands: SAFETY JOGGER | MKT | HORSE | WORKSITE</p></div></div><div class="copyright"><span>© 2026 H.H Traders, Rawalpindi.</span><span>Demo design — sample products and prices for design approval only.</span></div></div></footer><div class="backdrop" id="backdrop"></div><div class="toast" id="toast"></div><a class="wafloat" href="https://wa.me/923465814290" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.8-1.7-.9-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.5-.6c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg></a><button class="chatfab" data-action="chat" aria-label="Chat with us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H4l2.2-2.9A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01" stroke-width="3"/></svg></button><div class="chatpanel" id="chatPanel"><header><span>H.H Traders Assistant</span><button data-action="chat" aria-label="Close chat" style="color:#fff;font-size:20px;width:40px;height:40px">&times;</button></header><div class="chatmsgs" id="chatMsgs"><div class="msg bot">Hello, welcome to H.H Traders. Ask me about prices, delivery, our address, or any product range.</div></div><div class="quickchips"><button data-action="chat-q" data-q="What are your prices?">Prices</button><button data-action="chat-q" data-q="Do you deliver?">Delivery</button><button data-action="chat-q" data-q="What is your address and phone?">Contact</button><button data-action="chat-q" data-q="How do I track my order?">Track Order</button></div><div class="chatform"><input id="chatInput" type="text" placeholder="Type your question..." aria-label="Chat message"><button data-action="chat-send">Send</button></div></div><script>
+const PRODUCTS = [{"id": 1, "name": "ABC Dry Powder Fire Extinguisher 6kg", "cat": "fire", "price": 5850, "brand": "", "moq": true, "best": true, "desc": "Multi-purpose dry powder extinguisher for Class A, B and C fires, supplied charged and ready to install.", "specs": ["Capacity: 6 kg", "Fire class: A / B / C", "Wall bracket included"]}, {"id": 2, "name": "CO2 Fire Extinguisher 5kg", "cat": "fire", "price": 7400, "brand": "", "moq": true, "best": false, "desc": "CO2 extinguisher for electrical and flammable-liquid fires. Leaves no residue after use.", "specs": ["Capacity: 5 kg", "Fire class: B / E", "Seamless steel cylinder"]}, {"id": 3, "name": "Fire Hose Reel 30m", "cat": "fire", "price": 18500, "brand": "", "moq": true, "best": true, "desc": "Wall-mounted hose reel with 30 m reinforced hose for buildings, factories and warehouses.", "specs": ["Hose length: 30 m", "Swinging wall mount", "Brass nozzle included"]}, {"id": 4, "name": "Safety Jogger Safety Shoes", "cat": "safety", "price": 6950, "brand": "SAFETY JOGGER", "moq": false, "best": true, "desc": "Steel-toe safety shoes with a slip-resistant sole for site and warehouse work.", "specs": ["Steel toe cap", "Slip-resistant PU sole", "Sizes: 39 to 46"]}, {"id": 5, "name": "Safety Helmet", "cat": "safety", "price": 850, "brand": "", "moq": true, "best": false, "desc": "Ventilated safety helmet with an adjustable headband for daily site use.", "specs": ["HDPE shell", "4-point inner harness", "Adjustable: 53 to 62 cm"]}, {"id": 6, "name": "Full Body Safety Harness", "cat": "safety", "price": 3850, "brand": "", "moq": false, "best": false, "desc": "Full body harness with double lanyard for safe work at height.", "specs": ["Polyester webbing", "Double hook lanyard", "Dorsal D-ring"]}, {"id": 7, "name": "Threaded Rod Set", "cat": "support", "price": 1450, "brand": "", "moq": true, "best": false, "desc": "Galvanised threaded rods for hanging and support installations. Pack of 10.", "specs": ["M10 x 1 m, pack of 10", "Zinc galvanised", "Grade 4.8 steel"]}, {"id": 8, "name": "Hanging Support Clamps Set", "cat": "support", "price": 980, "brand": "", "moq": true, "best": false, "desc": "Beam and pipe clamp set for trapeze hanging supports.", "specs": ["12-piece set", "Galvanised steel", "Fits M8 / M10 rods"]}, {"id": 9, "name": "Cable Tray Channel 3m", "cat": "support", "price": 2300, "brand": "", "moq": true, "best": false, "desc": "Perforated cable tray channel for structured cable and pipe runs.", "specs": ["Length: 3 m", "Width: 100 mm", "Galvanised finish"]}, {"id": 10, "name": "Refrigerant Manifold Gauge Set", "cat": "hvac", "price": 6800, "brand": "", "moq": false, "best": true, "desc": "Manifold gauge set for charging and testing AC and refrigeration systems.", "specs": ["R22 / R410A scales", "3 charging hoses", "Brass body valves"]}, {"id": 11, "name": "HVAC Vacuum Pump", "cat": "hvac", "price": 24500, "brand": "", "moq": false, "best": false, "desc": "Single-stage vacuum pump for AC installation and service work.", "specs": ["Motor: 1/4 HP", "Flow: 2.5 CFM", "Oil sight glass"]}, {"id": 12, "name": "Copper Pipe Coil 15m", "cat": "hvac", "price": 9750, "brand": "", "moq": true, "best": false, "desc": "Soft copper pipe coil for split AC installation.", "specs": ["Length: 15 m coil", "OD: 3/8 inch", "Wall: 0.8 mm"]}, {"id": 13, "name": "MKT Injection Anchoring Adhesive", "cat": "anchor", "price": 2150, "brand": "MKT", "moq": false, "best": true, "desc": "Injection anchoring adhesive cartridge for heavy-duty fixings in concrete.", "specs": ["Cartridge: 300 ml", "Vinylester resin", "For rods and rebar"]}, {"id": 14, "name": "HORSE Epoxy Anchoring Cartridge", "cat": "anchor", "price": 1890, "brand": "HORSE", "moq": false, "best": false, "desc": "Epoxy anchoring cartridge for structural anchoring in concrete.", "specs": ["Cartridge: 360 ml", "High bond strength", "2 mixer nozzles included"]}, {"id": 15, "name": "Chemical Anchor Studs Set", "cat": "anchor", "price": 1250, "brand": "", "moq": true, "best": false, "desc": "Chemical anchor studs with nuts and washers. Set of 8.", "specs": ["M12 x 160 mm, set of 8", "Galvanised steel", "Nuts and washers included"]}, {"id": 16, "name": "WORKSITE Cordless Drill 20V", "cat": "tools", "price": 12500, "brand": "WORKSITE", "moq": false, "best": true, "desc": "20V cordless drill driver with two batteries for site and workshop work.", "specs": ["20V, 2 batteries", "Chuck: 13 mm", "LED work light"]}, {"id": 17, "name": "Angle Grinder 4 Inch", "cat": "tools", "price": 4850, "brand": "WORKSITE", "moq": false, "best": false, "desc": "Compact 4 inch angle grinder for cutting and grinding steel.", "specs": ["Disc: 100 mm", "Motor: 850 W", "Side handle included"]}, {"id": 18, "name": "Rotary Hammer Drill", "cat": "tools", "price": 15900, "brand": "", "moq": false, "best": false, "desc": "SDS-plus rotary hammer for drilling and light chiselling in concrete.", "specs": ["Drilling capacity: 26 mm", "3 functions", "SDS-plus chuck"]}, {"id": 19, "name": "Workshop Tool Kit 128 Pcs", "cat": "general", "price": 9900, "brand": "", "moq": false, "best": true, "desc": "128-piece hand tool kit in a moulded case for maintenance teams.", "specs": ["Sockets, spanners, drivers", "Chrome vanadium steel", "Carry case included"]}, {"id": 20, "name": "LED Work Light", "cat": "general", "price": 2450, "brand": "", "moq": false, "best": false, "desc": "Rechargeable LED work light for sites, stores and workshops.", "specs": ["Output: 50W LED", "Rechargeable battery", "Adjustable stand"]}, {"id": 21, "name": "Dispatch Supplies Kit", "cat": "general", "price": 2600, "brand": "", "moq": true, "best": false, "desc": "Packing and dispatch essentials kit for stores and warehouses.", "specs": ["Tape, cutter, markers, labels", "Stretch film roll included", "Ready-to-use box"]}];
+const CATS = [{"key": "fire", "label": "Fire Fighting Equipment"}, {"key": "safety", "label": "Safety Items"}, {"key": "support", "label": "Hanging Support Systems"}, {"key": "hvac", "label": "HVAC"}, {"key": "anchor", "label": "Adhesive & Epoxy Anchoring"}, {"key": "tools", "label": "Power Tools"}, {"key": "general", "label": "General Order Supplies"}];
+const CATL = {}; CATS.forEach(c => CATL[c.key] = c.label);
+const ICONS = {"fire": "<path d=\"M21 16h6v22a3 3 0 0 1-3 3h0a3 3 0 0 1-3-3V16z\"/><path d=\"M21 19c-5 0-7-3-7-8\"/><path d=\"M20 12l9-3\"/><circle cx=\"30\" cy=\"9\" r=\"2.4\"/><path d=\"M24 24v6\"/>", "safety": "<path d=\"M11 31c0-9 5-15 13-15s13 6 13 15\"/><path d=\"M6 34h36\"/><path d=\"M24 16v7\"/>", "support": "<path d=\"M5 13h38\"/><path d=\"M15 13v18M33 13v18\"/><path d=\"M11 35h8M29 35h8\"/><path d=\"M15 22h0M33 22h0\"/>", "hvac": "<rect x=\"9\" y=\"9\" width=\"30\" height=\"30\"/><circle cx=\"24\" cy=\"24\" r=\"4.5\"/><path d=\"M24 19.5V12M28 26.5l6.5 3M20 26.5l-6.5 3\"/>", "anchor": "<path d=\"M24 5l8 4.5v9L24 23l-8-4.5v-9L24 5z\"/><path d=\"M24 23v18\"/><path d=\"M19 31l10-2M19 37l10-2\"/>", "tools": "<path d=\"M7 13h23v9h-9v12h-8V22H7V13z\"/><path d=\"M30 17.5h11\"/><path d=\"M13 26h8\"/>", "general": "<path d=\"M24 7l16 7v20L24 41 8 34V14L24 7z\"/><path d=\"M8 14l16 7 16-7M24 21v20\"/>"};
+const DESIGN = document.body.dataset.design || '1';
+const PAGE = document.body.dataset.page || 'home';
+const MODE = document.body.dataset.mode || 'grid';
+const CARTK = 'hh_cart_' + DESIGN, WISHK = 'hh_wish_' + DESIGN, ORDERK = 'hh_last_' + DESIGN;
+const state = { cat: 'all', q: '', sort: 'featured', cart: {}, wish: {}, modalQty: 1, pdId: null };
+try { state.cart = JSON.parse(localStorage.getItem(CARTK) || '{}') || {}; } catch (e) { state.cart = {}; }
+try { state.wish = JSON.parse(localStorage.getItem(WISHK) || '{}') || {}; } catch (e) { state.wish = {}; }
+try { const sc = sessionStorage.getItem('hh_cat_' + DESIGN); if (sc) { state.cat = sc; sessionStorage.removeItem('hh_cat_' + DESIGN); } const sq = sessionStorage.getItem('hh_q'); if (sq) { state.q = sq; sessionStorage.removeItem('hh_q'); } } catch (e) {}
+function $(s, r) { return (r || document).querySelector(s); }
+function $$(s, r) { return Array.from((r || document).querySelectorAll(s)); }
+function fmt(n) { return 'Rs ' + n.toLocaleString('en-US'); }
+function icon(cat, cls) { return '<img class="pimg" src="cat-' + cat + '.jpg" alt="" loading="lazy">'; }
+function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+function saveCart() { try { localStorage.setItem(CARTK, JSON.stringify(state.cart)); localStorage.setItem(WISHK, JSON.stringify(state.wish)); } catch (e) {} }
+function prod(id) { return PRODUCTS.find(p => p.id === id); }
+function shopUrl() { return 'design-' + DESIGN + '-shop.html'; }
+function filtered() {
+  let list = PRODUCTS.filter(p => (state.cat === 'all' || p.cat === state.cat) &&
+    (p.name + ' ' + CATL[p.cat] + ' ' + (p.brand || '')).toLowerCase().indexOf(state.q.toLowerCase()) >= 0);
+  if (state.sort === 'low') list = list.slice().sort((a, b) => a.price - b.price);
+  if (state.sort === 'high') list = list.slice().sort((a, b) => b.price - a.price);
+  if (state.sort === 'name') list = list.slice().sort((a, b) => a.name.localeCompare(b.name));
+  return list;
+}
+function tags(p) { let t = ''; if (p.best) t += '<span class="tag">Best Seller</span>'; else if (p.moq) t += '<span class="tag moq">MOQ: 10+ pcs</span>'; return t; }
+function cardHTML(p, rv) {
+  return '<article class="pcard' + (rv ? ' rv' : '') + '"><div class="vis">' + tags(p) + icon(p.cat) +
+    '<button class="wish' + (state.wish[p.id] ? ' on' : '') + '" data-action="wish" data-id="' + p.id + '" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.4 5 7.8 5c1.7 0 3.3.9 4.2 2.4C12.9 5.9 14.5 5 16.2 5c2.4 0 4.3 2 4.3 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg></button></div>' +
+    '<div class="body"><span class="cat">' + CATL[p.cat] + '</span><h3 data-action="view" data-id="' + p.id + '">' + p.name + '</h3>' +
+    '<span class="price">' + fmt(p.price) + '</span>' +
+    '<div class="row"><button class="btn sm" data-action="add" data-id="' + p.id + '">Add to Cart</button>' +
+    '<button class="btn sm ghost" data-action="view" data-id="' + p.id + '">Details</button></div></div></article>';
+}
+function rowHTML(p, rv) {
+  return '<div class="prow' + (rv ? ' rv' : '') + '"><div class="vis">' + tags(p) + icon(p.cat) + '</div><div class="info">' +
+    '<span class="cat" style="font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--brand)">' + CATL[p.cat] + (p.brand ? ' | ' + p.brand : '') + '</span>' +
+    '<h3 data-action="view" data-id="' + p.id + '">' + p.name + '</h3><p>' + p.desc + '</p></div>' +
+    '<div style="text-align:right;min-width:150px"><div class="price">' + fmt(p.price) + '</div>' +
+    '<div style="display:flex;gap:8px;margin-top:8px;justify-content:flex-end"><button class="btn sm" data-action="add" data-id="' + p.id + '">Add to Cart</button>' +
+    '<button class="wish' + (state.wish[p.id] ? ' on' : '') + '" style="position:static" data-action="wish" data-id="' + p.id + '" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.4 5 7.8 5c1.7 0 3.3.9 4.2 2.4C12.9 5.9 14.5 5 16.2 5c2.4 0 4.3 2 4.3 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg></button></div></div></div>';
+}
+function groupsHTML(list, rv) {
+  let html = '';
+  CATS.forEach(c => {
+    const items = list.filter(p => p.cat === c.key);
+    if (!items.length) return;
+    html += '<section class="dept"><div class="depthead"><h3>' + c.label + '</h3><span>' + items.length + ' products</span></div><div class="deptrow">' +
+      items.map(p => cardHTML(p, rv)).join('') +
+      '<a class="quotetile' + (rv ? ' rv' : '') + '" href="https://wa.me/923465814290" target="_blank" rel="noopener"><strong>Need more in ' + c.label + '?</strong><span>Send your list on WhatsApp and get a bulk trade quote.</span><b>Request Bulk Quote</b></a></div></section>';
+  });
+  return html || '<div class="empty">No products match your search.</div>';
+}
+function renderShop() {
+  const list = filtered();
+  if (MODE === 'grid') { const g = $('#grid'); if (g) g.innerHTML = list.length ? list.map(p => cardHTML(p, true)).join('') : '<div class="empty" style="grid-column:1/-1">No products match your search.</div>'; }
+  if (MODE === 'list') { const g = $('#list'); if (g) g.innerHTML = list.length ? list.map(p => rowHTML(p, true)).join('') : '<div class="empty">No products match your search.</div>'; const c = $('#resCount'); if (c) c.textContent = list.length + ' products'; }
+  if (MODE === 'groups') { const h = $('#groups'); if (h) h.innerHTML = groupsHTML(list, true); }
+  $$('.chip').forEach(ch => ch.classList.toggle('on', ch.dataset.cat === state.cat));
+  $$('[data-catlink]').forEach(a => a.classList.toggle('on', a.dataset.catlink === state.cat));
+  armReveal(document);
+}
+function renderHome() {
+  const best = PRODUCTS.filter(p => p.best), rest = PRODUCTS.filter(p => !p.best);
+  const g = $('#grid'); if (g) g.innerHTML = best.concat(rest).slice(0, 8).map(p => cardHTML(p, true)).join('');
+  const l = $('#list'); if (l) l.innerHTML = PRODUCTS.slice(0, 6).map(p => rowHTML(p, true)).join('');
+  const h = $('#groups'); if (h) h.innerHTML = groupsHTML(PRODUCTS, true);
+  const r = $('#rail'); if (r) r.innerHTML = best.map(p => cardHTML(p, false)).join('');
+  armReveal(document);
+}
+function cartCount() { return Object.values(state.cart).reduce((a, b) => a + b, 0); }
+function cartTotal() { return Object.entries(state.cart).reduce((a, e) => a + (prod(+e[0]) ? prod(+e[0]).price * e[1] : 0), 0); }
+function updateBadge(popIt) { $$('.cartBadge').forEach(b => { b.textContent = cartCount(); if (popIt) { b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop'); } }); }
+function toast(msg) { const t = $('#toast'); if (!t) return; t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2400); }
+function flyToCart(srcEl) {
+  try {
+    const btn = $('.cartBtn'); if (!srcEl || !btn || !srcEl.animate) return;
+    const card = srcEl.closest('.pcard,.prow') || srcEl;
+    const vis = card.querySelector('.vis') || srcEl;
+    const r1 = vis.getBoundingClientRect(), r2 = btn.getBoundingClientRect();
+    const clone = vis.cloneNode(true);
+    clone.classList.add('flyclone');
+    clone.style.left = r1.left + 'px'; clone.style.top = r1.top + 'px'; clone.style.width = r1.width + 'px'; clone.style.height = r1.height + 'px'; clone.style.background = '#F4F4F4';
+    document.body.appendChild(clone);
+    const dx = r2.left + r2.width / 2 - (r1.left + r1.width / 2), dy = r2.top + r2.height / 2 - (r1.top + r1.height / 2);
+    const anim = clone.animate([
+      { transform: 'translate(0,0) scale(1)', opacity: 1 },
+      { transform: 'translate(' + dx * 0.5 + 'px,' + (dy * 0.5 - 110) + 'px) scale(.42)', opacity: .95, offset: .55 },
+      { transform: 'translate(' + dx + 'px,' + dy + 'px) scale(.05)', opacity: .5 }
+    ], { duration: 700, easing: 'cubic-bezier(.3,.7,.4,1)' });
+    anim.onfinish = () => { clone.remove(); btn.classList.remove('pulse'); void btn.offsetWidth; btn.classList.add('pulse'); };
+  } catch (e) {}
+}
+function addToCart(id, qty, srcEl) {
+  state.cart[id] = (state.cart[id] || 0) + (qty || 1);
+  saveCart(); updateBadge(true);
+  if (srcEl) flyToCart(srcEl);
+  toast(prod(id).name + ' added to cart');
+  if (PAGE === 'cart') renderCartPage();
+  if (PAGE === 'checkout') renderCheckout();
+}
+function cartItemHTML(e) {
+  const p = prod(+e[0]); if (!p) return '';
+  return '<div class="citem"><div class="vis">' + icon(p.cat) + '</div><div style="flex:1"><strong style="font-size:14.5px">' + p.name + '</strong><br><span class="price" style="font-size:15px">' + fmt(p.price) + '</span>' +
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px"><span class="qty"><button data-action="cdec" data-id="' + p.id + '">-</button><span>' + e[1] + '</span><button data-action="cinc" data-id="' + p.id + '">+</button></span>' +
+    '<button data-action="crm" data-id="' + p.id + '" style="font-weight:700;color:var(--brand);min-height:40px">Remove</button></div></div></div>';
+}
+function renderCartPage() {
+  const host = $('#cartItems'); if (!host) return;
+  const entries = Object.entries(state.cart);
+  host.innerHTML = entries.length ? entries.map(cartItemHTML).join('') : '<div class="empty">Your cart is empty. <a href="' + shopUrl() + '" style="color:var(--brand);font-weight:800">Go to Shop</a></div>';
+  const st = $('#cartSubtotal'); if (st) st.textContent = fmt(cartTotal());
+  const ct = $('#cartCountTxt'); if (ct) ct.textContent = cartCount() + ' item(s)';
+}
+function renderCheckout() {
+  const host = $('#coItems'); if (!host) return;
+  const entries = Object.entries(state.cart);
+  host.innerHTML = entries.length ? entries.map(e => { const p = prod(+e[0]); return p ? '<div class="sumrow"><span>' + p.name + ' x ' + e[1] + '</span><strong>' + fmt(p.price * e[1]) + '</strong></div>' : ''; }).join('') : '<div class="empty">Your cart is empty.</div>';
+  const t = $('#coTotal'); if (t) t.textContent = fmt(cartTotal());
+}
+function renderProduct() {
+  const id = +((location.search.match(/id=(\d+)/) || [])[1]) || 1;
+  const p = prod(id) || PRODUCTS[0]; state.pdId = p.id; state.modalQty = 1;
+  $('#pdVis').innerHTML = icon(p.cat);
+  $('#pdCat').textContent = CATL[p.cat] + (p.brand ? ' | ' + p.brand : '');
+  $('#pdName').textContent = p.name;
+  $('#pdPrice').textContent = fmt(p.price);
+  $('#pdDesc').textContent = p.desc;
+  $('#pdSpecs').innerHTML = p.specs.map(s => '<li>' + s + '</li>').join('') + (p.moq ? '<li>Trade item: MOQ 10+ pcs for bulk pricing</li>' : '');
+  $('#pdQty').textContent = '1';
+  document.title = p.name + ' | H.H Traders';
+  const rel = $('#related'); if (rel) rel.innerHTML = PRODUCTS.filter(x => x.cat === p.cat && x.id !== p.id).concat(PRODUCTS.filter(x => x.cat !== p.cat)).slice(0, 4).map(x => cardHTML(x, false)).join('');
+}
+function botReply(text) {
+  const t = text.toLowerCase();
+  if (t.indexOf('price') >= 0 || t.indexOf('cost') >= 0 || t.indexOf('rate') >= 0) return 'All demo prices are shown on the product cards in Rs. For bulk and trade quantities, send your list on WhatsApp at 0346 5814290 and the team will quote you.';
+  if (t.indexOf('deliver') >= 0 || t.indexOf('shipping') >= 0) return 'We arrange delivery across Pakistan. Delivery charges are confirmed on a call before your order is dispatched, so there are no surprises.';
+  if (t.indexOf('contact') >= 0 || t.indexOf('phone') >= 0 || t.indexOf('address') >= 0 || t.indexOf('where') >= 0 || t.indexOf('location') >= 0) return 'Visit us at Office # 14, Mumtaz Market, City Saddar Road, Rawalpindi. Call 0312 5488700 or 0346 5814290.';
+  if (t.indexOf('order') >= 0 || t.indexOf('track') >= 0) return 'After checkout you get an order number like HH-2026-1234. Open the Track Order page and enter it, or share it on WhatsApp at 0346 5814290.';
+  if (t.indexOf('fire') >= 0 || t.indexOf('extinguisher') >= 0) return 'Our Fire Fighting Equipment range includes ABC and CO2 extinguishers and hose reels. Open the Shop page and pick the Fire Fighting category.';
+  if (t.indexOf('tool') >= 0 || t.indexOf('drill') >= 0) return 'In Power Tools you will find the WORKSITE Cordless Drill 20V, Angle Grinder 4 Inch and a Rotary Hammer Drill. Tap any product for full specs.';
+  if (t.indexOf('hi') >= 0 || t.indexOf('hello') >= 0 || t.indexOf('salam') >= 0) return 'Hello and welcome to H.H Traders. Ask me about prices, delivery, our address, or any product range.';
+  return 'I can help with prices, delivery, our Rawalpindi address and phone numbers, order tracking, and product ranges like fire fighting, safety items, HVAC and power tools. What would you like to know?';
+}
+function sendChat(text) {
+  const box = $('#chatMsgs'); if (!box) return;
+  const v = (text || $('#chatInput').value || '').trim(); if (!v) return;
+  box.innerHTML += '<div class="msg me"></div>'; box.lastChild.textContent = v;
+  $('#chatInput').value = '';
+  setTimeout(() => { box.innerHTML += '<div class="msg bot"></div>'; box.lastChild.textContent = botReply(v); box.scrollTop = box.scrollHeight; }, 250);
+  box.scrollTop = box.scrollHeight;
+}
+function setTheme(name) { document.documentElement.setAttribute('data-theme', name); store('hh-theme', name); $$('.themeBtn').forEach(b => b.classList.toggle('on', b.dataset.theme === name)); }
+function closeLayers() { $$('.mnav').forEach(d => d.classList.remove('open')); const b = $('#backdrop'); if (b) b.classList.remove('open'); document.body.style.overflow = ''; }
+/* ---- Noor Wave Cascade reveal ---- */
+let io = null;
+function revealEl(el) {
+  if (!el.classList.contains('rv') || el.classList.contains('in')) return;
+  let idx = 0; if (el.parentElement) idx = Array.from(el.parentElement.children).filter(s => s.classList && s.classList.contains('rv')).indexOf(el);
+  const delay = Math.min(Math.max(idx, 0) * 110, 660);
+  el.style.transitionDelay = delay + 'ms';
+  el.classList.add('in');
+  setTimeout(() => { el.classList.remove('rv', 'in', 'armed'); el.style.transitionDelay = ''; }, 1750 + delay);
+}
+function armReveal(scope) {
+  $$('.rv:not(.armed)', scope || document).forEach(el => {
+    el.classList.add('armed');
+    if (io) io.observe(el);
+  });
+}
+function sweepReveal() { $$('.rv.armed').forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight * 0.96 && r.bottom > 0) revealEl(el); }); }
+if ('IntersectionObserver' in window) {
+  io = new IntersectionObserver(entries => { entries.forEach(en => { if (en.isIntersecting) { revealEl(en.target); io.unobserve(en.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+}
+setInterval(sweepReveal, 700);
+setTimeout(() => { $$('.rv').forEach(revealEl); }, 1800);
+if ('MutationObserver' in window) { new MutationObserver(() => armReveal(document)).observe(document.documentElement, { childList: true, subtree: true }); }
+if (!window.__hhBound) {
+  window.__hhBound = true;
+  document.addEventListener('click', function (e) {
+    if (e.target.id === 'backdrop') { closeLayers(); return; }
+    const el = e.target.closest('[data-action],[data-cat],[data-catlink],[data-theme]');
+    if (!el) return;
+    const a = el.dataset.action;
+    if (el.dataset.theme) { setTheme(el.dataset.theme); return; }
+    if (el.dataset.catlink !== undefined) {
+      const cat = el.dataset.catlink;
+      if (PAGE === 'shop') { state.cat = cat; renderShop(); const g = $('#products'); if (g && g.scrollIntoView) g.scrollIntoView({ behavior: 'smooth' }); }
+      else { try { sessionStorage.setItem('hh_cat_' + DESIGN, cat); } catch (err) {} if (el.tagName !== 'A') location.href = shopUrl(); }
+      if (el.classList.contains('catlink')) closeLayers();
+      return;
+    }
+    if (el.dataset.cat !== undefined && el.classList.contains('chip')) { state.cat = el.dataset.cat; renderShop(); return; }
+    const id = +el.dataset.id || null;
+    if (a === 'add') addToCart(id, 1, el);
+    else if (a === 'view') location.href = 'design-' + DESIGN + '-product.html?id=' + id;
+    else if (a === 'wish') { state.wish[id] = !state.wish[id]; if (!state.wish[id]) delete state.wish[id]; saveCart(); el.classList.toggle('on', !!state.wish[id]); el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
+    else if (a === 'close') closeLayers();
+    else if (a === 'cinc') { state.cart[id]++; saveCart(); updateBadge(false); renderCartPage(); renderCheckout(); }
+    else if (a === 'cdec') { state.cart[id]--; if (state.cart[id] <= 0) delete state.cart[id]; saveCart(); updateBadge(false); renderCartPage(); renderCheckout(); }
+    else if (a === 'crm') { delete state.cart[id]; saveCart(); updateBadge(false); renderCartPage(); renderCheckout(); }
+    else if (a === 'pd-inc') { state.modalQty++; $('#pdQty').textContent = state.modalQty; }
+    else if (a === 'pd-dec') { if (state.modalQty > 1) state.modalQty--; $('#pdQty').textContent = state.modalQty; }
+    else if (a === 'pd-add') addToCart(state.pdId, state.modalQty, $('#pdVis'));
+    else if (a === 'pd-buy') { state.cart[state.pdId] = (state.cart[state.pdId] || 0) + state.modalQty; saveCart(); updateBadge(false); location.href = 'design-' + DESIGN + '-checkout.html'; }
+    else if (a === 'burger') { $('#mnav').classList.add('open'); $('#backdrop').classList.add('open'); }
+    else if (a === 'chat') { $('#chatPanel').classList.toggle('open'); }
+    else if (a === 'chat-send') sendChat();
+    else if (a === 'chat-q') sendChat(el.dataset.q);
+    else if (a === 'rail-prev') { const r = $('#rail'); try { r.scrollBy({ left: -330, behavior: 'smooth' }); } catch (err) { r.scrollLeft -= 330; } }
+    else if (a === 'rail-next') { const r = $('#rail'); try { r.scrollBy({ left: 330, behavior: 'smooth' }); } catch (err) { r.scrollLeft += 330; } }
+  });
+  document.addEventListener('input', function (e) {
+    if (e.target.classList && e.target.classList.contains('searchInput')) {
+      if (PAGE === 'shop') { state.q = e.target.value; renderShop(); }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('searchInput') && PAGE !== 'shop') {
+      e.preventDefault(); try { sessionStorage.setItem('hh_q', e.target.value); } catch (err) {} location.href = shopUrl();
+    }
+    if (e.key === 'Enter' && e.target.id === 'chatInput') { e.preventDefault(); sendChat(); }
+    if (e.key === 'Escape') closeLayers();
+  });
+  document.addEventListener('change', function (e) { if (e.target.id === 'sortSel') { state.sort = e.target.value; renderShop(); } });
+}
+document.addEventListener('DOMContentLoaded', function () {
+  const saved = store('hh-theme'); setTheme(saved || 'red');
+  updateBadge(false);
+  if (PAGE === 'home') renderHome();
+  if (PAGE === 'shop') { const si = $('.searchInput'); if (si && state.q) si.value = state.q; renderShop(); }
+  if (PAGE === 'product') renderProduct();
+  if (PAGE === 'cart') renderCartPage();
+  if (PAGE === 'checkout') {
+    renderCheckout();
+    const co = $('#coForm');
+    if (co) co.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!cartCount()) { toast('Your cart is empty'); return; }
+      const btn = $('#placeBtn'); btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Placing Order...';
+      setTimeout(() => {
+        const num = 'HH-2026-' + Math.floor(1000 + Math.random() * 9000);
+        const order = { num: num, total: cartTotal(), count: cartCount(), name: (co.querySelector('[name="name"]') || {}).value || '' };
+        try { localStorage.setItem(ORDERK, JSON.stringify(order)); } catch (err) {}
+        $('#orderNo').textContent = num;
+        $('#coFormView').style.display = 'none'; $('#coSuccess').style.display = '';
+        state.cart = {}; saveCart(); updateBadge(false);
+      }, 900);
+    });
+  }
+  if (PAGE === 'track') {
+    const show = function (num) {
+      if (!/^HH-2026-\d{4}$/.test(num)) { toast('Enter a valid order number, e.g. HH-2026-1234'); return; }
+      $('#trackNoEcho').textContent = num;
+      const res = $('#trackResult'); res.style.display = '';
+      const tl = $('#trackTl'); tl.classList.remove('go'); void tl.offsetWidth;
+      $$('#trackTl .step').forEach((s, i) => { s.classList.toggle('done', i < 3); s.querySelector('.dot').style.animationDelay = (i * 200) + 'ms'; });
+      $('#trackFill').style.width = '58%';
+      requestAnimationFrame(() => tl.classList.add('go'));
+    };
+    const tf = $('#trackForm');
+    if (tf) tf.addEventListener('submit', function (e) { e.preventDefault(); show($('#trackInput').value.trim().toUpperCase()); });
+    const last = $('#useLast');
+    if (last) last.addEventListener('click', function () {
+      let o = null; try { o = JSON.parse(localStorage.getItem(ORDERK) || 'null'); } catch (err) {}
+      if (o && o.num) { $('#trackInput').value = o.num; show(o.num); } else toast('No recent order found on this device. Place an order first.');
+    });
+    let o = null; try { o = JSON.parse(localStorage.getItem(ORDERK) || 'null'); } catch (err) {}
+    if (o && o.num) { $('#trackInput').value = o.num; show(o.num); }
+  }
+  armReveal(document);
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  var sl = document.querySelector('[data-slider]');
+  if (sl) {
+    var track = sl.querySelector('.slides'), n = track.children.length, i = 0;
+    var dots = sl.querySelector('.sldots');
+    for (var k = 0; k < n; k++) { var b = document.createElement('button'); b.className = 'sldot'; b.setAttribute('aria-label', 'Go to slide ' + (k + 1)); b.dataset.i = k; dots.appendChild(b); }
+    function go(x) { i = (x + n) % n; track.style.transform = 'translateX(-' + (i * 100) + '%)'; Array.from(dots.children).forEach(function (dt, j) { dt.classList.toggle('on', j === i); }); }
+    var timer = setInterval(function () { go(i + 1); }, 4500);
+    function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 4500); }
+    sl.addEventListener('click', function (e) {
+      var dt = e.target.closest('.sldot'); if (dt) { go(+dt.dataset.i); reset(); return; }
+      var a = e.target.closest('[data-action]'); if (!a) return;
+      if (a.dataset.action === 'sl-prev') { go(i - 1); reset(); }
+      if (a.dataset.action === 'sl-next') { go(i + 1); reset(); }
+    });
+    go(0);
+  }
+  var cf = document.getElementById('ctForm');
+  if (cf) cf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('ctRef').textContent = 'HH-ENQ-' + Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('ctFormView').style.display = 'none';
+    document.getElementById('ctSuccess').style.display = '';
+  });
+});
+</script></body></html>
